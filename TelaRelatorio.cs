@@ -17,7 +17,7 @@ namespace Controle_Camera
         {
             InitializeComponent();
             lbl_quantidade.Text = "";
-            
+            cb_tipoRel.Text = "Aguardando Devolução";
         }
 
         private void btn_gerar_Click(object sender, EventArgs e)
@@ -53,6 +53,20 @@ namespace Controle_Camera
 
                 }
                 
+            }
+            if (res == 2)
+            {
+                //dg_relatorio.Columns[2].DataGridView.EditMode = DataGridViewEditMode.EditOnKeystroke;
+                MovimentacaoCamera camera = new MovimentacaoCamera();
+                resultado = camera.BuscarCamRelatorio("SEM CONSERTO");
+                lbl_quantidade.Text = resultado.Count.ToString();
+                for (int i = 0; i < resultado.Count; i++)
+                {
+                    //lb_cam.Items.Add(resultado[i][0] + " ; " + resultado[i][1]);
+                    dg_relatorio.Rows.Add(resultado[i][0].ToString(), resultado[i][1].ToString());
+
+                }
+
             }
 
         }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaRelatorio));
             this.gb_tipoRel = new System.Windows.Forms.GroupBox();
+            this.lbl_quant = new System.Windows.Forms.Label();
             this.lbl_quantidade = new System.Windows.Forms.Label();
             this.btn_gerar = new System.Windows.Forms.Button();
             this.cb_tipoRel = new System.Windows.Forms.ComboBox();
@@ -37,7 +38,6 @@
             this.ID_Camera = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbl_quant = new System.Windows.Forms.Label();
             this.gb_tipoRel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_relatorio)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,15 @@
             this.gb_tipoRel.TabIndex = 0;
             this.gb_tipoRel.TabStop = false;
             this.gb_tipoRel.Text = "Tipo de relatorio";
+            // 
+            // lbl_quant
+            // 
+            this.lbl_quant.AutoSize = true;
+            this.lbl_quant.Location = new System.Drawing.Point(720, 51);
+            this.lbl_quant.Name = "lbl_quant";
+            this.lbl_quant.Size = new System.Drawing.Size(96, 20);
+            this.lbl_quant.TabIndex = 3;
+            this.lbl_quant.Text = "Quantidade:";
             // 
             // lbl_quantidade
             // 
@@ -79,7 +88,8 @@
             this.cb_tipoRel.FormattingEnabled = true;
             this.cb_tipoRel.Items.AddRange(new object[] {
             "Aguardando Devolução",
-            "Aguardando Envio para Manutenção"});
+            "Aguardando Envio para Manutenção",
+            "Sem Conserto"});
             this.cb_tipoRel.Location = new System.Drawing.Point(38, 40);
             this.cb_tipoRel.Name = "cb_tipoRel";
             this.cb_tipoRel.Size = new System.Drawing.Size(363, 28);
@@ -125,15 +135,6 @@
             this.Data.Name = "Data";
             this.Data.ReadOnly = true;
             this.Data.Width = 150;
-            // 
-            // lbl_quant
-            // 
-            this.lbl_quant.AutoSize = true;
-            this.lbl_quant.Location = new System.Drawing.Point(720, 51);
-            this.lbl_quant.Name = "lbl_quant";
-            this.lbl_quant.Size = new System.Drawing.Size(115, 24);
-            this.lbl_quant.TabIndex = 3;
-            this.lbl_quant.Text = "Quantidade:";
             // 
             // TelaRelatorio
             // 
