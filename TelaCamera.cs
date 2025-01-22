@@ -81,10 +81,10 @@ namespace Controle_Camera
 
                     MovimentacaoCamera mov2 = new MovimentacaoCamera();
                     mov2.CAMERA_ID = txb_cam.Text;
-                    mov2.PROPRIETARIO_EMPRESTADOR_CRO = txb_cro.Text;
+                    mov2.PROPRIETARIO_EMPRESTADOR_CRO = "12345";
                     mov2.DATA_MOVIMENTACAO = "SYSDATE";
                     mov2.OBSERVACAO = "camera devolvida do " + txb_cro.Text;
-                    mov2.LOCALIZACAO = txb_cro.Text;
+                    mov2.LOCALIZACAO = "12345";
                     mov2.IncluirMovimentacao();
                 }
                 else if (cb_acoes.Text == "TROCA DE CAMERA COM DEFEITO")
