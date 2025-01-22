@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controle_Camera_Biblioteca.Classes;
 
 namespace Controle_Camera
 {
@@ -15,6 +16,7 @@ namespace Controle_Camera
         public TelaRelatorio()
         {
             InitializeComponent();
+            lbl_quantidade.Text = "";
             
         }
 
@@ -22,16 +24,35 @@ namespace Controle_Camera
         {
             dg_relatorio.Rows.Clear();
             int res = cb_tipoRel.SelectedIndex;
-            if (res == 0)
+            List<List<string>> resultado; 
+            if (res == 0) 
             {
-                dg_relatorio.Columns[2].DataGridView.EditMode = DataGridViewEditMode.EditOnKeystroke;
-                dg_relatorio.Rows.Add("String de teste", "coluna 2");
+                //dg_relatorio.Columns[2].DataGridView.EditMode = DataGridViewEditMode.EditOnKeystroke;
+                MovimentacaoCamera camera = new MovimentacaoCamera();
+                resultado = camera.BuscarCamRelatorio("DISPONÍVEL");
+                lbl_quantidade.Text = resultado.Count.ToString();
+                for (int i = 0; i < resultado.Count; i++)
+                {
+                    //lb_cam.Items.Add(resultado[i][0] + " ; " + resultado[i][1]);
+                    dg_relatorio.Rows.Add(resultado[i][0].ToString(), resultado[i][1].ToString());
+
+                }
+                
                 
             }
             if (res == 1) 
             {
-                dg_relatorio.Columns[2].DataGridView.EditMode = DataGridViewEditMode.EditOnKeystroke;
-                dg_relatorio.Rows.Add("String de teste 2", "coluna undefined");
+                //dg_relatorio.Columns[2].DataGridView.EditMode = DataGridViewEditMode.EditOnKeystroke;
+                MovimentacaoCamera camera = new MovimentacaoCamera();
+                resultado = camera.BuscarCamRelatorio("AGUARDANDO ENVIO");
+                lbl_quantidade.Text = resultado.Count.ToString();
+                for (int i = 0; i < resultado.Count; i++)
+                {
+                    //lb_cam.Items.Add(resultado[i][0] + " ; " + resultado[i][1]);
+                    dg_relatorio.Rows.Add(resultado[i][0].ToString(), resultado[i][1].ToString());
+
+                }
+                
             }
 
         }

@@ -40,3 +40,4 @@ C:\Users\carlo\source\repos\Controle_Camera\obj\Debug\Controle.69E34E53.Up2Date
 C:\Users\carlo\source\repos\Controle_Camera\obj\Debug\Controle_Camera.TelaCamera.resources
 C:\Users\carlo\source\repos\Controle_Camera\obj\Debug\Controle_Camera.CadastroCamera.resources
 C:\Users\carlo\source\repos\Controle_Camera\obj\Debug\Controle_Camera.TelaRelatorio.resources
+C:\Users\carlo\source\repos\Controle_Camera\obj\Debug\Controle_Camera.TelaQuantidadeCam.resources

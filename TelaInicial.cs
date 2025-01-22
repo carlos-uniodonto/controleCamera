@@ -96,5 +96,11 @@ namespace Controle_Camera
             TelaRelatorio r = new TelaRelatorio();
             r.ShowDialog(this);
         }
+
+        private void bt_quantCam_Click(object sender, EventArgs e)
+        {
+            TelaQuantidadeCam q = new TelaQuantidadeCam();
+            q.ShowDialog(this);
+        }
     }
 }

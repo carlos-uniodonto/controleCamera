@@ -30,18 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaRelatorio));
             this.gb_tipoRel = new System.Windows.Forms.GroupBox();
+            this.lbl_quantidade = new System.Windows.Forms.Label();
             this.btn_gerar = new System.Windows.Forms.Button();
             this.cb_tipoRel = new System.Windows.Forms.ComboBox();
             this.dg_relatorio = new System.Windows.Forms.DataGridView();
             this.ID_Camera = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marcar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbl_quant = new System.Windows.Forms.Label();
             this.gb_tipoRel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_relatorio)).BeginInit();
             this.SuspendLayout();
             // 
             // gb_tipoRel
             // 
+            this.gb_tipoRel.Controls.Add(this.lbl_quant);
+            this.gb_tipoRel.Controls.Add(this.lbl_quantidade);
             this.gb_tipoRel.Controls.Add(this.btn_gerar);
             this.gb_tipoRel.Controls.Add(this.cb_tipoRel);
             this.gb_tipoRel.Location = new System.Drawing.Point(33, 34);
@@ -50,6 +54,15 @@
             this.gb_tipoRel.TabIndex = 0;
             this.gb_tipoRel.TabStop = false;
             this.gb_tipoRel.Text = "Tipo de relatorio";
+            // 
+            // lbl_quantidade
+            // 
+            this.lbl_quantidade.AutoSize = true;
+            this.lbl_quantidade.Location = new System.Drawing.Point(836, 51);
+            this.lbl_quantidade.Name = "lbl_quantidade";
+            this.lbl_quantidade.Size = new System.Drawing.Size(51, 20);
+            this.lbl_quantidade.TabIndex = 2;
+            this.lbl_quantidade.Text = "label1";
             // 
             // btn_gerar
             // 
@@ -79,10 +92,11 @@
             this.dg_relatorio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_relatorio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Camera,
-            this.cro,
-            this.marcar});
+            this.Nome,
+            this.Data});
             this.dg_relatorio.Location = new System.Drawing.Point(39, 129);
             this.dg_relatorio.Name = "dg_relatorio";
+            this.dg_relatorio.ReadOnly = true;
             this.dg_relatorio.RowHeadersWidth = 62;
             this.dg_relatorio.RowTemplate.Height = 28;
             this.dg_relatorio.Size = new System.Drawing.Size(1149, 469);
@@ -93,21 +107,33 @@
             this.ID_Camera.HeaderText = "Id Camera";
             this.ID_Camera.MinimumWidth = 8;
             this.ID_Camera.Name = "ID_Camera";
+            this.ID_Camera.ReadOnly = true;
             this.ID_Camera.Width = 150;
             // 
-            // cro
+            // Nome
             // 
-            this.cro.HeaderText = "CRO";
-            this.cro.MinimumWidth = 8;
-            this.cro.Name = "cro";
-            this.cro.Width = 150;
+            this.Nome.HeaderText = "Nome";
+            this.Nome.MinimumWidth = 8;
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 150;
             // 
-            // marcar
+            // Data
             // 
-            this.marcar.HeaderText = "Marcar";
-            this.marcar.MinimumWidth = 8;
-            this.marcar.Name = "marcar";
-            this.marcar.Width = 150;
+            this.Data.HeaderText = "Data da Ultima Movimentação";
+            this.Data.MinimumWidth = 8;
+            this.Data.Name = "Data";
+            this.Data.ReadOnly = true;
+            this.Data.Width = 150;
+            // 
+            // lbl_quant
+            // 
+            this.lbl_quant.AutoSize = true;
+            this.lbl_quant.Location = new System.Drawing.Point(720, 51);
+            this.lbl_quant.Name = "lbl_quant";
+            this.lbl_quant.Size = new System.Drawing.Size(115, 24);
+            this.lbl_quant.TabIndex = 3;
+            this.lbl_quant.Text = "Quantidade:";
             // 
             // TelaRelatorio
             // 
@@ -120,6 +146,7 @@
             this.Name = "TelaRelatorio";
             this.Text = "TelaRelatorio";
             this.gb_tipoRel.ResumeLayout(false);
+            this.gb_tipoRel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_relatorio)).EndInit();
             this.ResumeLayout(false);
 
@@ -132,7 +159,9 @@
         private System.Windows.Forms.DataGridView dg_relatorio;
         private System.Windows.Forms.Button btn_gerar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Camera;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cro;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn marcar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Data;
+        private System.Windows.Forms.Label lbl_quantidade;
+        private System.Windows.Forms.Label lbl_quant;
     }
 }

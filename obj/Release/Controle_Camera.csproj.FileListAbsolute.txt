@@ -40,3 +40,4 @@ C:\Users\carlo\source\repos\Controle_Camera\obj\Release\Controle_Camera.exe
 C:\Users\carlo\source\repos\Controle_Camera\obj\Release\Controle_Camera.pdb
 C:\Users\carlo\source\repos\Controle_Camera\obj\Release\Controle_Camera.CadastroCamera.resources
 C:\Users\carlo\source\repos\Controle_Camera\obj\Release\Controle_Camera.TelaRelatorio.resources
+C:\Users\carlo\source\repos\Controle_Camera\obj\Release\Controle_Camera.TelaQuantidadeCam.resources

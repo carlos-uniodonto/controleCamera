@@ -45,6 +45,8 @@
             this.proprietario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id_camera = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LOCALIZACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bt_quantCam = new System.Windows.Forms.Button();
             this.gb_acao.SuspendLayout();
             this.gb_buscaCamera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_cam)).BeginInit();
@@ -54,13 +56,14 @@
             // 
             this.gb_acao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gb_acao.Controls.Add(this.bt_quantCam);
             this.gb_acao.Controls.Add(this.lbl_resultado);
             this.gb_acao.Controls.Add(this.lbl_quantidade);
             this.gb_acao.Controls.Add(this.btn_limpar);
             this.gb_acao.Controls.Add(this.btn_relatorio);
             this.gb_acao.Controls.Add(this.btn_cadastrar);
             this.gb_acao.Controls.Add(this.btn_carregarSelecionado);
-            this.gb_acao.Location = new System.Drawing.Point(971, 25);
+            this.gb_acao.Location = new System.Drawing.Point(1261, 25);
             this.gb_acao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gb_acao.Name = "gb_acao";
             this.gb_acao.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -90,7 +93,7 @@
             // 
             // btn_limpar
             // 
-            this.btn_limpar.Location = new System.Drawing.Point(8, 269);
+            this.btn_limpar.Location = new System.Drawing.Point(8, 328);
             this.btn_limpar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_limpar.Name = "btn_limpar";
             this.btn_limpar.Size = new System.Drawing.Size(196, 49);
@@ -149,14 +152,14 @@
             this.txt_busca.Location = new System.Drawing.Point(261, 46);
             this.txt_busca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_busca.Name = "txt_busca";
-            this.txt_busca.Size = new System.Drawing.Size(437, 26);
+            this.txt_busca.Size = new System.Drawing.Size(727, 26);
             this.txt_busca.TabIndex = 1;
             // 
             // btn_buscar
             // 
             this.btn_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_buscar.Location = new System.Drawing.Point(706, 29);
+            this.btn_buscar.Location = new System.Drawing.Point(996, 29);
             this.btn_buscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(219, 45);
@@ -178,7 +181,7 @@
             this.gb_buscaCamera.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gb_buscaCamera.Name = "gb_buscaCamera";
             this.gb_buscaCamera.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gb_buscaCamera.Size = new System.Drawing.Size(942, 552);
+            this.gb_buscaCamera.Size = new System.Drawing.Size(1232, 552);
             this.gb_buscaCamera.TabIndex = 0;
             this.gb_buscaCamera.TabStop = false;
             this.gb_buscaCamera.Text = "Buscar dados da camera";
@@ -187,21 +190,19 @@
             // 
             this.dg_cam.AllowUserToAddRows = false;
             this.dg_cam.AllowUserToDeleteRows = false;
-            this.dg_cam.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dg_cam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_cam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CRO,
             this.proprietario,
             this.Id_camera,
-            this.LOCALIZACAO});
+            this.LOCALIZACAO,
+            this.observacao});
             this.dg_cam.Location = new System.Drawing.Point(13, 117);
             this.dg_cam.Name = "dg_cam";
             this.dg_cam.ReadOnly = true;
             this.dg_cam.RowHeadersWidth = 62;
             this.dg_cam.RowTemplate.Height = 28;
-            this.dg_cam.Size = new System.Drawing.Size(912, 420);
+            this.dg_cam.Size = new System.Drawing.Size(1202, 420);
             this.dg_cam.TabIndex = 5;
             // 
             // CRO
@@ -226,21 +227,39 @@
             this.Id_camera.MinimumWidth = 8;
             this.Id_camera.Name = "Id_camera";
             this.Id_camera.ReadOnly = true;
-            this.Id_camera.Width = 150;
             // 
             // LOCALIZACAO
             // 
             this.LOCALIZACAO.HeaderText = "LOCAL";
-            this.LOCALIZACAO.MinimumWidth = 8;
+            this.LOCALIZACAO.MinimumWidth = 20;
             this.LOCALIZACAO.Name = "LOCALIZACAO";
             this.LOCALIZACAO.ReadOnly = true;
-            this.LOCALIZACAO.Width = 60;
+            this.LOCALIZACAO.Width = 180;
+            // 
+            // observacao
+            // 
+            this.observacao.HeaderText = "Observação";
+            this.observacao.MinimumWidth = 8;
+            this.observacao.Name = "observacao";
+            this.observacao.ReadOnly = true;
+            this.observacao.Width = 150;
+            // 
+            // bt_quantCam
+            // 
+            this.bt_quantCam.Location = new System.Drawing.Point(10, 269);
+            this.bt_quantCam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bt_quantCam.Name = "bt_quantCam";
+            this.bt_quantCam.Size = new System.Drawing.Size(196, 49);
+            this.bt_quantCam.TabIndex = 6;
+            this.bt_quantCam.Text = "Quantidade por camera";
+            this.bt_quantCam.UseVisualStyleBackColor = true;
+            this.bt_quantCam.Click += new System.EventHandler(this.bt_quantCam_Click);
             // 
             // TelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1209, 631);
+            this.ClientSize = new System.Drawing.Size(1499, 631);
             this.Controls.Add(this.gb_acao);
             this.Controls.Add(this.gb_buscaCamera);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -273,6 +292,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn proprietario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_camera;
         private System.Windows.Forms.DataGridViewTextBoxColumn LOCALIZACAO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn observacao;
+        private System.Windows.Forms.Button bt_quantCam;
     }
 }
 
